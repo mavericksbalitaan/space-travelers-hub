@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/planet.png';
 import './stylesheets/Header.css';
+
+const navLinkStyles = ({ isActive }) => ({
+  fontWeight: isActive ? 'bold' : 'normal',
+  textDecoration: isActive ? 'underline' : 'none',
+});
 
 const Header = () => (
   <div className="header">
@@ -11,9 +16,9 @@ const Header = () => (
     </div>
     <div className="nav">
       <ul>
-        <Link to="/"><li>Rocket</li></Link>
-        <Link to="missions"><li>Mission</li></Link>
-        <Link to="myprofile"><li>My Profile</li></Link>
+        <NavLink to="/" style={navLinkStyles}><li>Rockets</li></NavLink>
+        <NavLink to="missions" style={navLinkStyles}><li>Missions</li></NavLink>
+        <NavLink to="myprofile" style={navLinkStyles}><li>My Profile</li></NavLink>
       </ul>
     </div>
   </div>
