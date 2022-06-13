@@ -9,19 +9,19 @@ const navLinkStyles = ({ isActive }) => ({
 });
 
 const Header = () => (
-  <div className="header">
+  <header>
     <div className="logo">
       <img className="space-logo" src={logo} alt="logo" />
       <span className="title-logo">Space Travelers&apos;  Hub</span>
     </div>
-    <div className="nav">
+    <nav>
       <ul>
-        <NavLink to="/" style={navLinkStyles}><li>Rockets</li></NavLink>
-        <NavLink to="missions" style={navLinkStyles}><li>Missions</li></NavLink>
-        <NavLink to="myprofile" style={navLinkStyles}><li>My Profile</li></NavLink>
+        <NavLink to="/" style={navLinkStyles}><span className="rockets">Rockets</span></NavLink>
+        <NavLink to="missions" style={navLinkStyles}><span className="missions">Missions</span></NavLink>
+        <NavLink to="myprofile" style={navLinkStyles}><span className="myprofile">My Profile</span></NavLink>
       </ul>
-    </div>
-  </div>
+    </nav>
+  </header>
 );
 
 export default Header;
