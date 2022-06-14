@@ -46,6 +46,11 @@ function Myprofile() {
               <h2 className="listName">
                 {el.rocketName}
               </h2>
+              <button className="readMore" type="button">
+                <a href={el.rocketWiki}>
+                  Read More
+                </a>
+              </button>
               <button className="remBtn" type="button" id={el.rocketId} onClick={cancelHandler}>
                 Cancel
               </button>
