@@ -7,13 +7,17 @@ function RocketsCards({ rocket }) {
     rocketName, rocketDesc, rocketImg,
   } = rocket;
 
+  const clickHandler = () => {
+    console.log('test');
+  };
+
   return (
     <section className="rocketCard">
       <img className="rocketImg" src={rocketImg} alt="" srcSet="" />
       <div className="rocketDesc">
         <h1 className="titleDesc">{rocketName}</h1>
         <p className="paraDesc">{rocketDesc}</p>
-        <button className="reserveBtn" type="button">Reserve Rocket</button>
+        <button className="reserveBtn" type="button" onClick={clickHandler}>Reserve Rocket</button>
       </div>
     </section>
   );
