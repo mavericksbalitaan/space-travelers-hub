@@ -20,7 +20,17 @@ function RocketsCards({ rocket }) {
           {rocketReserved === true && (<span className="rocketReserved">Reserved</span>)}
           {rocketDesc}
         </p>
-        <button className="reserveBtn" type="button" id={rocketId} onClick={clickHandler}>Reserve Rocket</button>
+        { rocketReserved === true
+          ? (
+            <button className="cancelBtn" type="button" id={rocketId} onClick={clickHandler}>
+              Cancel Reservation
+            </button>
+          )
+          : (
+            <button className="reserveBtn" type="button" id={rocketId} onClick={clickHandler}>
+              Reserve Rocket
+            </button>
+          )}
       </div>
     </section>
   );

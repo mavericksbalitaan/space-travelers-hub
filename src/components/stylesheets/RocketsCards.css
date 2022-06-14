@@ -51,6 +51,17 @@
   bottom: 0;
 }
 
+.cancelBtn {
+  background-color: var(--color-white);
+  color: #6D757D;
+  width: 10rem;
+  border: 1px solid #6D757D;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  bottom: 0;
+}
+
 .reserveBtn:hover {
   background-color: var(--color-greenishblue);
 }
@@ -85,7 +96,8 @@
     margin: 0;
   }
 
-  .reserveBtn {
+  .reserveBtn,
+  .cancelBtn {
     width: 10rem;
     font-size: 1rem;
     position: absolute;
