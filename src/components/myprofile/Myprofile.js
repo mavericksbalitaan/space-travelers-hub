@@ -1,9 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import '../stylesheets/Myprofile.css';
+import { cancelRocket } from '../../redux/rockets/RocketsSlice';
 
 function Myprofile() {
   const rockets = useSelector((state) => state.rockets.filter((el) => el.rocketReserved === true));
+  const dispatch = useDispatch();
+
+  const cancelHandler = (e) => {
+    const data = e.target.id;
+    dispatch(cancelRocket(data));
+  };
+
   if (!rockets.length) {
     return (
       <section className="tableContainer">
@@ -27,14 +35,23 @@ function Myprofile() {
       <div className="missions">
         <h1>My Missions</h1>
         <ul className="itemsList">
-          {rockets && rockets.map((el) => (<li key={el.rocketId}>{el.rocketName}</li>))}
+          <li>There are no missions joined.</li>
         </ul>
       </div>
       <div className="rockets">
         <h1>My Rockets</h1>
-        <ul className="itemsList">
-          {rockets && rockets.map((el) => (<li key={el.rocketId}>{el.rocketName}</li>))}
-        </ul>
+        <div className="itemsList">
+          {rockets && rockets.map((el) => (
+            <div className="listBox" key={el.rocketId}>
+              <h2 className="listName">
+                {el.rocketName}
+              </h2>
+              <button className="remBtn" type="button" id={el.rocketId} onClick={cancelHandler}>
+                Cancel
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
