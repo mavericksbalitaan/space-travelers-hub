@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
-import store from '../../redux/configureStore';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import '../stylesheets/Myprofile.css';
 
 function Myprofile() {
-  let rocketsData;
-  useEffect(() => {
-    const data = store.getState().rockets;
-    rocketsData = data.filter((el) => el.rocketReserved === true);
-  }, []);
+  const rockets = useSelector((state) => state.rockets.filter((el) => el.rocketReserved === true));
   return (
     <section className="tableContainer">
       <div className="missions">
@@ -15,7 +11,7 @@ function Myprofile() {
       </div>
       <div className="rockets">
         <h1>My Rockets</h1>
-        {rocketsData && rocketsData.map((el) => (console.log(el)))}
+        {rockets && rockets.map((el) => (<li key={el.rocketId}>{el.rocketName}</li>))}
       </div>
     </section>
   );
