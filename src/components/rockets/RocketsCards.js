@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 function RocketsCards({ rocket }) {
   const {
-    rocketName, rocketDesc, rocketImg,
+    rocketId, rocketName, rocketDesc, rocketImg,
   } = rocket;
 
-  const clickHandler = () => {
-    console.log('test');
+  const clickHandler = (e) => {
+    console.log(e.target.id);
   };
 
   return (
@@ -17,7 +17,7 @@ function RocketsCards({ rocket }) {
       <div className="rocketDesc">
         <h1 className="titleDesc">{rocketName}</h1>
         <p className="paraDesc">{rocketDesc}</p>
-        <button className="reserveBtn" type="button" onClick={clickHandler}>Reserve Rocket</button>
+        <button className="reserveBtn" type="button" id={rocketId} onClick={clickHandler}>Reserve Rocket</button>
       </div>
     </section>
   );
@@ -25,6 +25,7 @@ function RocketsCards({ rocket }) {
 
 RocketsCards.propTypes = {
   rocket: PropTypes.shape({
+    rocketId: PropTypes.string,
     rocketName: PropTypes.string,
     rocketDesc: PropTypes.string,
     rocketImg: PropTypes.string,
