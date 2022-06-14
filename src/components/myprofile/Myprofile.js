@@ -8,10 +8,15 @@ function Myprofile() {
     <section className="tableContainer">
       <div className="missions">
         <h1>My Missions</h1>
+        <ul className="itemsList">
+          {rockets && rockets.map((el) => (<li key={el.rocketId}>{el.rocketName}</li>))}
+        </ul>
       </div>
       <div className="rockets">
         <h1>My Rockets</h1>
-        {rockets && rockets.map((el) => (<li key={el.rocketId}>{el.rocketName}</li>))}
+        <ul className="itemsList">
+          {rockets && rockets.map((el) => (<li key={el.rocketId}>{el.rocketName}</li>))}
+        </ul>
       </div>
     </section>
   );
