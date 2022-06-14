@@ -1,20 +1,18 @@
-import { Provider } from 'react-redux';
-import store from './redux/configureStore';
+import { render } from '@testing-library/react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import App from './App';
+import Header from './Header';
 
-const MockApp = () => (
-  <Provider store={store}>
+const MockHeader = () => (
   <BrowserRouter>
-    <App />
+    <Header />
   </BrowserRouter>
-</Provider>
 );
 
 test('renders correctly', () => {
   const tree = renderer
-    .create(<MockApp />)
+    .create(<MockHeader />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
