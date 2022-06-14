@@ -31,6 +31,15 @@
   margin: 0;
 }
 
+.rocketReserved {
+  background-color: var(--color-greenishblue);
+  color: var(--color-white);
+  width: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
 .reserveBtn {
   background-color: var(--color-blue);
   color: var(--color-white);
@@ -66,6 +75,10 @@
 
   .titleDesc {
     font-size: 1.5rem;
+  }
+
+  .rocketReserved {
+    font-size: 1rem;
   }
 
   .paraDesc {
