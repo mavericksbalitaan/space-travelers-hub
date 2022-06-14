@@ -53,9 +53,9 @@
 
 .cancelBtn {
   background-color: var(--color-white);
-  color: #6D757D;
+  color: #6d757d;
   width: 10rem;
-  border: 1px solid #6D757D;
+  border: 1px solid #6d757d;
   border-radius: 0.5rem;
   padding: 0.5rem 0;
   cursor: pointer;
