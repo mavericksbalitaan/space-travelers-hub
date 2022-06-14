@@ -26,7 +26,7 @@ const rocketsSlice = createSlice({
         rocketId: el.rocket_id,
         rocketName: el.rocket_name,
         rocketDesc: el.description,
-        rocketImg: el.flickr_images,
+        rocketImg: el.flickr_images[0],
       }));
       return rockets;
     },
