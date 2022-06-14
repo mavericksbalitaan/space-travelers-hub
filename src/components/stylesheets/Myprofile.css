@@ -41,6 +41,7 @@ li {
   align-items: center;
   border: 1px solid grey;
   padding: 0.25rem;
+  width: 90%;
 }
 
 .listName {
@@ -105,7 +106,6 @@ li {
     justify-content: space-between;
     align-items: center;
     border: 1px solid grey;
-    width: 25rem;
   }
 
   .listName {
