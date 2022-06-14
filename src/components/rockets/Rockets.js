@@ -9,7 +9,7 @@ function RocketsList() {
 
   useEffect(() => {
     dispatch(fetchRocketsApi());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
