@@ -1,5 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ab5c7fb-b132-4621-8c1f-05ef09d2cfcb/deploy-status)](https://app.netlify.com/sites/app-space-travelers-hub/deploys)
 
 # SPACE TRAVELERS' HUB
 
@@ -25,18 +26,20 @@
 
 - [x] Languages: HTML, Sass and JavaScript
 - [x] Linters: Stylelint and ESLint
-- [x] Front-end library: React
-- [x] APIs: TVmaze API and Involvement API
+- [x] Front-end library: React with Redux Toolkit
+- [x] API: SpaceX API
 - [x] Code Editor: VS Code
 
 ## Website Mockup 📱 💻 🖥️
+![website_screenshot](https://user-images.githubusercontent.com/98527559/173787178-8196d8f9-7bfb-44c5-a855-401700b5324a.png)
 
 ## Screenshots 📸
 Screenshots can be found in the repository.
 
 ## Live Demo 🔗
 
-Check the live demo [here]()👈
+Check the live demo [heroku](https://app-space-travelers-hub.herokuapp.com/)👈
+Check the live demo [netlify](https://app-space-travelers-hub.netlify.app/)👈
 
 ## Getting Started
 

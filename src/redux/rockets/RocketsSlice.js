@@ -20,17 +20,36 @@ export const fetchRocketsApi = createAsyncThunk(
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    reserveRocket: {
+      reducer: (state, action) => state.map((el) => (
+        el.rocketId === action.payload ? { ...el, rocketReserved: true } : el)),
+      prepare: (rocketId) => ({
+        payload: rocketId,
+      }),
+    },
+    cancelRocket: {
+      reducer: (state, action) => state.map((el) => (
+        el.rocketId === action.payload ? { ...el, rocketReserved: false } : el)),
+      prepare: (rocketId) => ({
+        payload: rocketId,
+      }),
+    },
+  },
   extraReducers: {
     [fetchRocketsApi.fulfilled]: (state, action) => {
       const rockets = action.payload.map((el) => ({
         rocketId: el.rocket_id,
         rocketName: el.rocket_name,
         rocketDesc: el.description,
-        rocketImg: el.flickr_images,
+        rocketImg: el.flickr_images[0],
+        rocketWiki: el.wikipedia,
       }));
       return rockets;
     },
   },
 });
+
+export const { reserveRocket, cancelRocket } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
