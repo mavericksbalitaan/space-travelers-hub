@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { unjoinMission, joinMission } from '../../redux/missions/MissionsSlice';
 import '../stylesheets/Missioncard.css';
@@ -32,6 +32,13 @@ const Missioncard = ({
       </div>
     </div>
   );
+};
+
+Missioncard.propTypes = {
+  id: PropTypes.string.isRequired,
+  missionname: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  missionjoin: PropTypes.bool.isRequired,
 };
 
 export default Missioncard;
