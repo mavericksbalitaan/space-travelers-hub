@@ -16,6 +16,7 @@
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 10px;
+  font-weight: 700;
 }
 
 .tbody {
@@ -28,6 +29,8 @@
   display: flex;
   flex: 0.15;
   justify-content: center;
+  font-weight: 700;
+  padding: 5px;
   border: 1px solid rgb(185, 184, 184);
 }
 
@@ -35,7 +38,6 @@
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
   border: 1px solid rgb(185, 184, 184);
   word-wrap: break-word;
   padding: 5px;
@@ -44,6 +46,7 @@
 .right {
   display: flex;
   flex: 0.3;
+  padding: 5px;
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(185, 184, 184);
@@ -100,7 +103,7 @@
   .left {
     display: flex;
     min-width: 20vw;
-    padding: 0 5px;
+    padding: 5px;
     justify-content: center;
     border: 1px solid rgb(185, 184, 184);
   }
@@ -109,7 +112,6 @@
     display: flex;
     width: 60vw;
     align-items: center;
-    justify-content: center;
     border: 1px solid rgb(185, 184, 184);
     word-wrap: break-word;
     padding: 5px;
@@ -120,6 +122,7 @@
     width: 20vw;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 5px;
     border: 1px solid rgb(185, 184, 184);
   }
 
