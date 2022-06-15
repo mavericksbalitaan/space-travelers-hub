@@ -17,7 +17,7 @@ const rocket = [
 
 const MockRockets = () => (
   <Provider store={store}>
-    <RocketsCards rocket={rocket}/>
+    <RocketsCards rocket={rocket} />
   </Provider>
 );
 

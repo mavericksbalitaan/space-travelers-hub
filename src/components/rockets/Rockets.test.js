@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Rockets from './Rockets';
 import { Provider } from 'react-redux';
+import Rockets from './Rockets';
 import store from '../../redux/configureStore';
 
 const MockRockets = () => (
