@@ -1,4 +1,7 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-unused-vars */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Initial State
@@ -20,16 +23,47 @@ export const fetchMissionsApi = createAsyncThunk(
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
+  reducers: {
+    joinMission: {
+      reducer: (state, action) => state.map((item) => (
+        item.missionid !== action.payload ? item
+          : { ...item, missionjoin: true }
+      )),
+    },
+    unjoinMission: {
+      reducer: (state, action) => state.map((item) => (
+        item.missionid !== action.payload ? item
+          : { ...item, missionjoin: false }
+      )),
+    },
+  },
   extraReducers: {
     [fetchMissionsApi.fulfilled]: (state, action) => {
       const missions = action.payload.map((el) => ({
-        id: el.mission_id,
+        // distructured data
+        missionid: el.mission_id,
         missionName: el.mission_name,
         missionDesc: el.description,
+        missionjoin: false,
       }));
       return missions;
     },
   },
 });
 
+export const selectAllmissions = (state) => state.missions;
+export const { joinMission, unjoinMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
+/*
+export const getMission = createAsyncThunk('missions/getmissions', async () => fetch('https://api.spacexdata.com/v3/missions')
+  .then((response) => response.json()));
+
+const missionSlice = createSlice(({
+  name: 'mission',
+  initialState: {
+    mission: [],
+    status: false,
+  },
+}));
+
+export default missionSlice.reducer; */
