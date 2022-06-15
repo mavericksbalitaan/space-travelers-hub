@@ -1,5 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ab5c7fb-b132-4621-8c1f-05ef09d2cfcb/deploy-status)](https://app.netlify.com/sites/app-space-travelers-hub/deploys)
 
 # SPACE TRAVELERS' HUB
 
@@ -36,7 +37,8 @@ Screenshots can be found in the repository.
 
 ## Live Demo 🔗
 
-Check the live demo [here]()👈
+Check the live demo [heroku](https://app-space-travelers-hub.herokuapp.com/)👈
+Check the live demo [netlify](https://app-space-travelers-hub.netlify.app/)👈
 
 ## Getting Started
 
