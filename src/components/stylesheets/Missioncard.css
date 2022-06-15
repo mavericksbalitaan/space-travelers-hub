@@ -54,7 +54,19 @@
   margin: 5px;
   color: white;
   border-radius: 5px;
-  background-color: blue;
+  background-color: rgb(109, 117, 125);
+  font-size: 12px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge2 {
+  display: flex;
+  margin: 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: #40a2b8;
   font-size: 12px;
   height: 30px;
   align-items: center;
@@ -62,6 +74,14 @@
 }
 
 .join-btn {
+  font-size: 15px;
+  padding: 5px;
+  cursor: pointer;
+  color: red;
+  border: 1px solid red;
+}
+
+.join {
   font-size: 15px;
   padding: 5px;
   cursor: pointer;
