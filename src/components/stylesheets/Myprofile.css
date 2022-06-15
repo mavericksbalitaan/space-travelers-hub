@@ -31,6 +31,7 @@ h1 {
 }
 
 li {
+  display: flex;
   font-size: 1rem;
   font-style: italic;
 }

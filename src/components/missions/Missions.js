@@ -8,7 +8,7 @@ const Missionlist = () => {
   const dispatch = useDispatch();
   const mission = useSelector((state) => state.missions);
   useEffect(() => {
-    dispatch(fetchMissionsApi());
+    if (!mission.length) dispatch(fetchMissionsApi());
   }, []);
   return (
     <div>

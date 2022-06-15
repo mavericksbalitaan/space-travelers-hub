@@ -7,9 +7,8 @@ import '../stylesheets/Missioncard.css';
 const Missioncard = ({
   missionname, description, id, missionjoin,
 }) => {
-  // const reservation = useSelector(selectAllmissions);
   const dispatch = useDispatch();
-  // const reservation = useSelector((state) => state.missions);
+
   const missionSwitchHandler = (e) => {
     dispatch(joinMission(e.target.id));
   };
