@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { unjoinMission, joinMission } from '../../redux/missions/MissionsSlice';
 import '../stylesheets/Missioncard.css';
@@ -7,9 +7,8 @@ import '../stylesheets/Missioncard.css';
 const Missioncard = ({
   missionname, description, id, missionjoin,
 }) => {
-  // const reservation = useSelector(selectAllmissions);
   const dispatch = useDispatch();
-  // const reservation = useSelector((state) => state.missions);
+
   const missionSwitchHandler = (e) => {
     dispatch(joinMission(e.target.id));
   };
@@ -26,13 +25,20 @@ const Missioncard = ({
             {description}
           </div>
           <div className="right">
-            {missionjoin === false ? (<span className="badge">Not A Member</span>) : (<span className="badge">Active Member</span>)}
-            {missionjoin === false ? (<button className="join-btn" type="submit" id={id} onClick={missionSwitchHandler}>Join Mision</button>) : (<button className="join-btn" type="submit" id={id} onClick={unjoinswitchhandler}>Leave Mission</button>)}
+            {missionjoin === false ? (<span className="badge2">Not A Member</span>) : (<span className="badge">Active Member</span>)}
+            {missionjoin === false ? (<button className="join" type="submit" id={id} onClick={missionSwitchHandler}>Join Mision</button>) : (<button className="join-btn" type="submit" id={id} onClick={unjoinswitchhandler}>Leave Mission</button>)}
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+Missioncard.propTypes = {
+  id: PropTypes.string.isRequired,
+  missionname: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  missionjoin: PropTypes.bool.isRequired,
 };
 
 export default Missioncard;
