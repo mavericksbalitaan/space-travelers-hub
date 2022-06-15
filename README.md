@@ -26,11 +26,12 @@
 
 - [x] Languages: HTML, Sass and JavaScript
 - [x] Linters: Stylelint and ESLint
-- [x] Front-end library: React
-- [x] APIs: TVmaze API and Involvement API
+- [x] Front-end library: React with Redux Toolkit
+- [x] API: SpaceX API
 - [x] Code Editor: VS Code
 
 ## Website Mockup 📱 💻 🖥️
+![website_screenshot](https://user-images.githubusercontent.com/98527559/173787178-8196d8f9-7bfb-44c5-a855-401700b5324a.png)
 
 ## Screenshots 📸
 Screenshots can be found in the repository.
