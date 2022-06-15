@@ -2,11 +2,9 @@
 
 .tableContainer {
   display: grid;
-  height: 80vh;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "missions rockets";
   margin: 1rem;
-  border: 1px solid grey;
   text-align: center;
   background-color: var(--color-white);
 }
