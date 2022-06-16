@@ -132,4 +132,10 @@
   .join-btn {
     margin-top: 20px;
   }
+
+  .badge2,
+  .badge {
+    text-align: center;
+    padding: 5px;
+  }
 }
