@@ -7,6 +7,7 @@ exports[`renders correctly 1`] = `
   <img
     alt=""
     className="rocketImg"
+    src="https://imgur.com/DaCfMsj.jpg"
     srcSet=""
   />
   <div
@@ -14,16 +15,26 @@ exports[`renders correctly 1`] = `
   >
     <h1
       className="titleDesc"
-    />
+    >
+      Falcon 1
+    </h1>
     <p
       className="paraDesc"
-    />
+    >
+      <span
+        className="rocketReserved"
+      >
+        Reserved
+      </span>
+      The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+    </p>
     <button
-      className="reserveBtn"
+      className="cancelBtn"
+      id="falcon1"
       onClick={[Function]}
       type="button"
     >
-      Reserve Rocket
+      Cancel Reservation
     </button>
   </div>
 </section>
