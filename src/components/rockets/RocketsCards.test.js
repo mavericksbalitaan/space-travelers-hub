@@ -6,6 +6,7 @@ import userEvent from '@testing-library/user-event';
 import store from '../../redux/configureStore';
 import RocketsCards from './RocketsCards';
 
+// test the rockets card
 const rocket = {
   rocketId: 'falcon1',
   rocketName: 'Falcon 1',

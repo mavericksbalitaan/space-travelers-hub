@@ -10,7 +10,7 @@ describe('Test the functionality of the RocketsSlice', () => {
           'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
         rocketImg: 'https://imgur.com/DaCfMsj.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_1',
-        rocketReserved: true,
+        rocketReserved: false,
       },
       {
         rocketId: 'falcon9',
@@ -20,7 +20,7 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_9',
-        rocketReserved: true,
+        rocketReserved: false,
       },
       {
         rocketId: 'falconheavy',
@@ -30,7 +30,7 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_Heavy',
-        rocketReserved: true,
+        rocketReserved: false,
       },
       {
         rocketId: 'starship',
@@ -40,7 +40,7 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://live.staticflickr.com/65535/48954138962_ee541e6755_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/SpaceX_Starship',
-        rocketReserved: true,
+        rocketReserved: false,
       },
     ];
 
@@ -52,7 +52,7 @@ describe('Test the functionality of the RocketsSlice', () => {
           'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
         rocketImg: 'https://imgur.com/DaCfMsj.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_1',
-        rocketReserved: true,
+        rocketReserved: false,
       },
       {
         rocketId: 'falcon9',
@@ -62,7 +62,7 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_9',
-        rocketReserved: true,
+        rocketReserved: false,
       },
       {
         rocketId: 'falconheavy',
@@ -72,7 +72,7 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_Heavy',
-        rocketReserved: true,
+        rocketReserved: false,
       },
       {
         rocketId: 'starship',
@@ -149,7 +149,7 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/Falcon_9',
-        rocketReserved: false,
+        rocketReserved: true,
       },
       {
         rocketId: 'falconheavy',
@@ -169,9 +169,9 @@ describe('Test the functionality of the RocketsSlice', () => {
         rocketImg:
           'https://live.staticflickr.com/65535/48954138962_ee541e6755_b.jpg',
         rocketWiki: 'https://en.wikipedia.org/wiki/SpaceX_Starship',
-        rocketReserved: true,
+        rocketReserved: false,
       },
     ];
-    expect(rocketsSlice(rockets, cancelRocket('falcon9'))).toEqual(newState);
+    expect(rocketsSlice(rockets, cancelRocket('starship'))).toEqual(newState);
   });
 });
