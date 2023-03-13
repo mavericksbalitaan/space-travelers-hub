@@ -38,8 +38,6 @@ Screenshots can be found in the repository.
 
 ## Live Demo 🔗
 
-Check the live demo [heroku](https://app-space-travelers-hub.herokuapp.com/)👈
-
 Check the live demo [netlify](https://app-space-travelers-hub.netlify.app/)👈
 
 ## Getting Started
